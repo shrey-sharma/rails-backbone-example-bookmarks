@@ -2,7 +2,7 @@ Bookmarks.Views.Bookmarks ||= {}
 
 class Bookmarks.Views.Bookmarks.EditView extends Backbone.View
   template : JST["backbone/templates/bookmarks/edit"]
-
+  
   events :
     "submit #edit-bookmark" : "update"
 
