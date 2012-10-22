@@ -1,0 +1,17 @@
+<p>
+  <b>Name:</b>
+  <%= name %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= address %>
+</p>
+
+<p>
+  <b>Tags:</b>
+  <%= tags %>
+</p>
+
+
+<a href="#/index">Back</a>
