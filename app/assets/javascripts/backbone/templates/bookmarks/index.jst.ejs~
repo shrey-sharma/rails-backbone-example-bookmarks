@@ -1,5 +1,5 @@
 <h1>Listing bookmarks</h1>
-<form id="filter" name="filter-tag">
+<form id="filter" name="filter-tag" class="form-search">
   <div class="field">
     <label for="tag"> Tag:</label>
     <input type="text" name="tag" id="tag" value="Enter tag to filter" >
@@ -9,7 +9,7 @@
   </div>
 
 </form>
-<table id="bookmarks-table">
+<table id="bookmarks-table" class="table">
   <tr>
     <th>Name</th>
     <th>Address</th>

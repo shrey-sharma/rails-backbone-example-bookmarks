@@ -23,6 +23,7 @@ class Bookmarks.Views.Bookmarks.NewView extends Backbone.View
     @collection.create(@model.toJSON(),
       success: (bookmark) =>
         @model = bookmark
+        flash[:success] = "New Bookmark Added!!!"
         window.location.hash = "/#{@model.id}"
 
       error: (bookmark, jqXHR) =>
