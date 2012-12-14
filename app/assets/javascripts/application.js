@@ -17,4 +17,5 @@
 //= require backbone_rails_sync
 //= require backbone_datalink
 //= require backbone/bookmarks
+//= require bootstrap
 //= require_tree .

@@ -1,4 +1,5 @@
 class Bookmarks.Models.Bookmark extends Backbone.Model
+  urlroot: '/bookmarks'
   paramRoot: 'bookmark'
 
   defaults:

@@ -11,16 +11,18 @@ end
 
 group :development, :test do
   gem "sqlite3-ruby", "~> 1.3.0", :require => "sqlite3"
+  gem "thin"
 end
 
-gem 'bootstrap-sass'
 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
+  gem 'bootstrap-sass'
+  gem 'bootstrap-generators'
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
-
+  gem 'simple_form'
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
 

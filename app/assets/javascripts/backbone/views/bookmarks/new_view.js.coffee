@@ -2,7 +2,7 @@ Bookmarks.Views.Bookmarks ||= {}
 
 class Bookmarks.Views.Bookmarks.NewView extends Backbone.View
   template: JST["backbone/templates/bookmarks/new"]
-  el = "#bookmark"
+
   events:
     "submit #new-bookmark": "save"
 
