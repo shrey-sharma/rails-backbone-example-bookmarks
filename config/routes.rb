@@ -1,6 +1,8 @@
 Bookmarks::Application.routes.draw do
   resources :bookmarks
-  root :to => 'bookmarks#index'
+  root :to => 'bookmarks#home'
+  match '/about' => 'bookmarks#about'
+  match '/contact' => 'bookmarks#contact'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

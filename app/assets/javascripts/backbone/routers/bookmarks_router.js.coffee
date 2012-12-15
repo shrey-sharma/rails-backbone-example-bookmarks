@@ -12,11 +12,11 @@ class Bookmarks.Routers.BookmarksRouter extends Backbone.Router
 
   newBookmark: ->
     @view = new Bookmarks.Views.Bookmarks.NewView(collection: @bookmarks)
-    $("#bookmarks").html(@view.render().el)
+    $("#new").html(@view.render().el)
 
   index: ->
     @view = new Bookmarks.Views.Bookmarks.IndexView(bookmarks: @bookmarks)
-    $("#bookmarks").html(@view.render().el)
+    $("#list").html(@view.render().el)
 
   show: (id) ->
     bookmark = @bookmarks.get(id)
@@ -28,4 +28,4 @@ class Bookmarks.Routers.BookmarksRouter extends Backbone.Router
     bookmark = @bookmarks.get(id)
 
     @view = new Bookmarks.Views.Bookmarks.EditView(model: bookmark)
-    $("#bookmarks").html(@view.render().el)
+    $("#edit").html(@view.render().el)

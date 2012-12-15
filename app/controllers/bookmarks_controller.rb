@@ -1,4 +1,10 @@
 class BookmarksController < ApplicationController
+  def home
+  end
+  def about
+  end
+  def contact
+  end
   # GET /bookmarks
   # GET /bookmarks.json
   def index

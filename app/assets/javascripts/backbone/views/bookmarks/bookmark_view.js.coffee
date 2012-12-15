@@ -4,7 +4,7 @@ class Bookmarks.Views.Bookmarks.BookmarkView extends Backbone.View
   template: JST["backbone/templates/bookmarks/bookmark"]
 
   events:
-    "click .destroy" : "destroy"
+    "click #destroy" : "destroy"
 
   tagName: "tr"
 

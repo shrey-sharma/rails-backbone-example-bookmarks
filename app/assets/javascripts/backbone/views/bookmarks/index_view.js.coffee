@@ -2,7 +2,6 @@ Bookmarks.Views.Bookmarks ||= {}
 
 class Bookmarks.Views.Bookmarks.IndexView extends Backbone.View
   template: JST["backbone/templates/bookmarks/index"]
-
   initialize: () ->
     @options.bookmarks.bind('reset', @addAll)
 
