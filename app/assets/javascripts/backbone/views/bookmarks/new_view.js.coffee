@@ -17,9 +17,7 @@ class Bookmarks.Views.Bookmarks.NewView extends Backbone.View
   save: (e) ->
     e.preventDefault()
     e.stopPropagation()
-
     @model.unset("errors")
-
     @collection.create(@model.toJSON(),
       success: (bookmark) =>
         @model = bookmark
@@ -31,7 +29,5 @@ class Bookmarks.Views.Bookmarks.NewView extends Backbone.View
 
   render: ->
     $(@el).html(@template(@model.toJSON() ))
-
     this.$("form").backboneLink(@model)
-
-    return this
+    @

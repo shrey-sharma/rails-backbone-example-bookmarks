@@ -15,5 +15,4 @@ class Bookmarks.Views.Bookmarks.IndexView extends Backbone.View
   render: =>
     $(@el).html(@template(bookmarks: @options.bookmarks.toJSON() ))
     @addAll()
-
-    return this
+    @

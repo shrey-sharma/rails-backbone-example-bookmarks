@@ -16,4 +16,4 @@ class Bookmarks.Views.Bookmarks.BookmarkView extends Backbone.View
 
   render: ->
     $(@el).html(@template(@model.toJSON() ))
-    return this
+    @
