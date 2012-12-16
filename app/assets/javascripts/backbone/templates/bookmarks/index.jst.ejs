@@ -1,11 +1,20 @@
-<div class="page-header">
-  <a href="#new" class="btn btn-primary">
-    <i class="icon-plus icon-white"></i>
-    New Bookmark
-  </a> 
-  <h1>Listing Bookmarks</h1>
+<div class="row-fluid">
+	<div class="span7">
+	 <h1>Stored Bookmarks</h1> 
+	</div>
+	<div class="span3" >
+	 <form id="filter" class="form-search" >
+	    <input type="text" id="key" class="input-medium search-query">
+	    <button type="submit" class="btn">Filter</button>
+	  </form>
+	</div>
+	<div class="span2">
+	  <a href="#new" class="btn btn-primary">
+	    <i class="icon-plus icon-white"></i>
+	    New Bookmark
+	  </a>
+	</div> 
 </div>
-
 <table id="bookmarks-table" class='table table-bordered table-striped' >
 	<tr>
 	  <th>Name</th>

@@ -1,8 +1,12 @@
 Bookmarks::Application.routes.draw do
+  
+  root :to => 'pages#home'
+
+  match '/about' => 'pages#about'
+
+  match '/contact' => 'pages#contact'
+
   resources :bookmarks
-  root :to => 'bookmarks#home'
-  match '/about' => 'bookmarks#about'
-  match '/contact' => 'bookmarks#contact'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

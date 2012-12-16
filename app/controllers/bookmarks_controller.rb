@@ -1,10 +1,4 @@
 class BookmarksController < ApplicationController
-  def home
-  end
-  def about
-  end
-  def contact
-  end
   # GET /bookmarks
   # GET /bookmarks.json
   def index
@@ -14,33 +8,6 @@ class BookmarksController < ApplicationController
       format.html # index.html.erb
       format.json { render json: @bookmarks }
     end
-  end
-
-  # GET /bookmarks/1
-  # GET /bookmarks/1.json
-  def show
-    @bookmark = Bookmark.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @bookmark }
-    end
-  end
-
-  # GET /bookmarks/new
-  # GET /bookmarks/new.json
-  def new
-    @bookmark = Bookmark.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @bookmark }
-    end
-  end
-
-  # GET /bookmarks/1/edit
-  def edit
-    @bookmark = Bookmark.find(params[:id])
   end
 
   # POST /bookmarks
