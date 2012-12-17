@@ -11,7 +11,7 @@ class Bookmarks.Views.Bookmarks.NewView extends Backbone.View
     @model = new @collection.model()
 
     @model.bind("change:errors", () =>
-      this.render()
+      @render()
     )
 
   save: (e) ->
@@ -29,10 +29,11 @@ class Bookmarks.Views.Bookmarks.NewView extends Backbone.View
         name_msg= if(error.name)then "Error: Name "+ error.name else ""
         add_msg= if(error.address)then "Error: " + error.address else ""
         err = if(name_msg != "")then name_msg + "\n" + add_msg else add_msg 
+        @collection.pop()
         alert err
     )
 
   render: ->
     $(@el).html(@template(@model.toJSON() ))
-    this.$("form").backboneLink(@model)
+    @.$("form").backboneLink(@model)
     @

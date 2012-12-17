@@ -16,12 +16,14 @@ class Bookmarks.Views.Bookmarks.IndexView extends Backbone.View
 
     @fil = $("#key").val()
     @list=@options.bookmarks.search(@fil)
-    @render() if @fil is "" else @renderlist()
+    if @fil is "" then @render() else @renderlist()
     return
 
   renderlist: ->
     $(@el).html(@template(bookmarks: @options.bookmarks.toJSON() ))
+    $("#key").val(@fil)
     @addOne model for model in @list
+    @
   
   addAll: () =>
     @options.bookmarks.each(@addOne)
