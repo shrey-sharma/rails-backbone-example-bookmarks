@@ -9,9 +9,9 @@ class Bookmarks.Models.Bookmark extends Backbone.Model
 class Bookmarks.Collections.BookmarksCollection extends Backbone.Collection
   model: Bookmarks.Models.Bookmark
   url: '/bookmarks'
-  search : (letters)->
-    return @ if letters is ""
-    pattern = new RegExp(letters,"gi")
+  search : (key) ->
+    return @ if key is ""
+    pattern = new RegExp(key,"gi")
     _.filter(@.models,(model) ->
       pattern.test(model.get("tags"));)
     
