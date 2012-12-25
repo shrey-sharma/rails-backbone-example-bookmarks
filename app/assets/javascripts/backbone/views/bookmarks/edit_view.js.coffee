@@ -28,5 +28,8 @@ class Bookmarks.Views.Bookmarks.EditView extends Backbone.View
 
   render : ->
     $(@el).html(@template(@model.toJSON() ))
+    $("#new").fadeTo("slow",0.33)
+    $("#edit").fadeTo("slow",1)
+    $("#list").fadeTo("slow",0.33)
     this.$("form").backboneLink(@model)
     @

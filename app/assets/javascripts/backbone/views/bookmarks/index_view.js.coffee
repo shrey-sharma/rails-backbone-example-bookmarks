@@ -9,6 +9,9 @@ class Bookmarks.Views.Bookmarks.IndexView extends Backbone.View
   initialize: () ->
     @options.bookmarks.bind('reset', @render)
     @options.bookmarks.bind('sync',@render)
+    $("#new").fadeTo("slow",0.33)
+    $("#edit").fadeTo("slow",0.33)
+    $("#list").fadeTo("slow",1)
   
   filter: (e) ->
     e.preventDefault()
@@ -33,6 +36,6 @@ class Bookmarks.Views.Bookmarks.IndexView extends Backbone.View
     @$("tbody").append(view.render().el)
 
   render: =>
-    $(@el).html(@template(bookmarks: @options.bookmarks.toJSON() ))
+    $(@el).html(@template(bookmarks: @options.bookmarks.toJSON()))
     @addAll()
     @
